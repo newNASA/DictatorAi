@@ -9,6 +9,8 @@
   --white: white;
   --text-color: rgba(34, 34, 34, 1);
   --pink-color: rgba(255, 43, 158, 1);
+  --header-gradient-h1:linear-gradient(106.7deg, #222222 12.31%, #5B5B5B 87.69%);
+  --blue-btn-gradient:linear-gradient(92.71deg, #5A56FF 11.79%, #8A88FF 88.21%);
 
   --p-size: 20px;
 }
@@ -104,7 +106,7 @@ header {
         font-weight: 600;
         font-size: 100px;
         line-height: 120px;
-        background: linear-gradient(106.7deg, #222222 12.31%, #5B5B5B 87.69%);
+        background: var(--header-gradient-h1);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
@@ -137,6 +139,48 @@ header {
         to {
           transform: rotate(360deg);
         }
+      }
+    }
+  }
+}
+
+// About Styles
+
+.about{
+  padding: 25px 100px;
+  .top{
+    display: flex;
+    gap: 20px;
+    .left{
+      width: 40%;
+    }
+    .left{
+      h1{
+        span{
+          color: var(--pink-color);
+        }
+        font-weight: 700;
+        font-size: 75px ;
+        line-height: 75px;
+        color: var(--text-color);
+      }
+    }
+    .right{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      width: 60%;
+      h2{
+        padding: 15px 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--blue-btn-gradient);
+        border-radius: 20px;
+        font-weight: 400;
+        font-size: 37px;
+        line-height: 37px;
+        color: var(--white);
       }
     }
   }
