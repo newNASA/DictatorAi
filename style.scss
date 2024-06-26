@@ -11,8 +11,11 @@
   --pink-color: rgba(255, 43, 158, 1);
   --header-gradient-h1:linear-gradient(106.7deg, #222222 12.31%, #5B5B5B 87.69%);
   --blue-btn-gradient:linear-gradient(92.71deg, #5A56FF 11.79%, #8A88FF 88.21%);
+  --pink-gradient: linear-gradient(87.99deg, #FF5CB5 24.48%, #FF8BCA 75.52%);
+  --service-cards-gradient: linear-gradient(90deg, #5A56FF 0%, #8A88FF 100%);
 
   --p-size: 20px;
+  --main-sections-padding:25px 100px;
 }
 
 li {
@@ -31,7 +34,7 @@ header {
 
   // Navbar Styles
   nav {
-    padding: 25px 100px;
+    padding: var(--main-sections-padding);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -147,7 +150,7 @@ header {
 // About Styles
 
 .about{
-  padding: 25px 100px;
+  padding: var(--main-sections-padding);
   .top{
     display: flex;
     gap: 20px;
@@ -182,6 +185,82 @@ header {
         line-height: 37px;
         color: var(--white);
       }
+    }
+  }
+
+  .bottom{
+    margin-top: 25px;
+    .card{
+      padding: 40px 30px 40px 30px;
+      border-radius: 20px;
+      background: var(--pink-gradient);
+      p{
+        font-weight: 400;
+        font-size: 33px;
+        line-height: 33px;
+        color: var(--white);
+      }
+    }
+  }
+}
+
+// Services Styles
+
+.services{
+  padding:var(--main-sections-padding) ;
+  margin-top: 150px;
+
+  .top{
+    h1{
+      font-weight: 600;
+      font-size: 60px;
+      line-height: 60px;
+    }
+  }
+
+  .bottom{
+    margin-top: 50px;
+    display: flex;
+    .left{
+      .card{
+        padding: 20px 30px 20px 30px;
+        border-radius: 30px;
+        background: var(--service-cards-gradient);
+        color: var(--white);
+        margin-top: 15px;
+  
+        &:first-child{
+          max-width: 904px;
+        }
+  
+        &:nth-child(2){
+          max-width: 1008px;
+        }
+  
+        &:nth-child(3){
+          max-width: 951px;
+        }
+        &:nth-child(4){
+          max-width: 882px;
+        }
+  
+        h1{
+          font-weight: 600;
+          font-size: 50px;
+          line-height: 50px;
+        }
+        p{
+          font-weight: 400;
+          font-size: 25px;
+          line-height: 25px;
+          margin-top: 10px;
+        }
+      }
+    }
+    .right{
+      z-index: 100;
+      position: absolute;
+      right:100px;
     }
   }
 }

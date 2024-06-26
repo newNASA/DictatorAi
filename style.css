@@ -11,7 +11,10 @@
   --pink-color: rgba(255, 43, 158, 1);
   --header-gradient-h1:linear-gradient(106.7deg, #222222 12.31%, #5B5B5B 87.69%);
   --blue-btn-gradient:linear-gradient(92.71deg, #5A56FF 11.79%, #8A88FF 88.21%);
+  --pink-gradient: linear-gradient(87.99deg, #FF5CB5 24.48%, #FF8BCA 75.52%);
+  --service-cards-gradient: linear-gradient(90deg, #5A56FF 0%, #8A88FF 100%);
   --p-size: 20px;
+  --main-sections-padding:25px 100px;
 }
 
 li {
@@ -27,7 +30,7 @@ header {
   height: 100vh;
 }
 header nav {
-  padding: 25px 100px;
+  padding: var(--main-sections-padding);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -128,7 +131,7 @@ header .head .right-head .spinner1 {
 }
 
 .about {
-  padding: 25px 100px;
+  padding: var(--main-sections-padding);
 }
 .about .top {
   display: flex;
@@ -163,4 +166,67 @@ header .head .right-head .spinner1 {
   font-size: 37px;
   line-height: 37px;
   color: var(--white);
+}
+.about .bottom {
+  margin-top: 25px;
+}
+.about .bottom .card {
+  padding: 40px 30px 40px 30px;
+  border-radius: 20px;
+  background: var(--pink-gradient);
+}
+.about .bottom .card p {
+  font-weight: 400;
+  font-size: 33px;
+  line-height: 33px;
+  color: var(--white);
+}
+
+.services {
+  padding: var(--main-sections-padding);
+  margin-top: 150px;
+}
+.services .top h1 {
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 60px;
+}
+.services .bottom {
+  margin-top: 50px;
+  display: flex;
+}
+.services .bottom .left .card {
+  padding: 20px 30px 20px 30px;
+  border-radius: 30px;
+  background: var(--service-cards-gradient);
+  color: var(--white);
+  margin-top: 15px;
+}
+.services .bottom .left .card:first-child {
+  max-width: 904px;
+}
+.services .bottom .left .card:nth-child(2) {
+  max-width: 1008px;
+}
+.services .bottom .left .card:nth-child(3) {
+  max-width: 951px;
+}
+.services .bottom .left .card:nth-child(4) {
+  max-width: 882px;
+}
+.services .bottom .left .card h1 {
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 50px;
+}
+.services .bottom .left .card p {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 25px;
+  margin-top: 10px;
+}
+.services .bottom .right {
+  z-index: 100;
+  position: absolute;
+  right: 100px;
 }/*# sourceMappingURL=style.css.map */
