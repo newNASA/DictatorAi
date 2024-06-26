@@ -264,3 +264,34 @@ header {
     }
   }
 }
+
+// Guide Styles
+
+.guide{
+  display: flex;
+  justify-content: space-between;
+  padding: var(--main-sections-padding);
+  margin-top: 150px;
+
+  .left{
+    width: 37.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    h1{
+      font-weight: 600;
+      font-size: 80px;
+      line-height: 80px;
+    }
+    p{
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+  .right{
+    width: 57.5%;
+    border: 1px solid red;
+  }
+}
