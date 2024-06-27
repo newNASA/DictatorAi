@@ -173,18 +173,23 @@ header {
       text-align: center;
     }
   }
-  .logos{
+  .logos {
     overflow: hidden;
     padding: 40px 0;
     white-space: nowrap;
     position: relative;
-    
-    &::before{
+
+    &::before {
       left: 0;
-      background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--white)) !important;
+      background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0),
+        var(--white)
+      ) !important;
     }
-    
-    &::before,&::after{
+
+    &::before,
+    &::after {
       position: absolute;
       top: 0;
       width: 200px;
@@ -192,16 +197,20 @@ header {
       content: "";
       z-index: 2;
       right: 0;
-      background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--white));
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        var(--white)
+      );
     }
-    &:hover .logos-slide{
+    &:hover .logos-slide {
       animation-play-state: paused;
     }
 
-    .logos-slide{
+    .logos-slide {
       animation: 20s slide infinite linear;
       display: inline-block;
-      img{
+      img {
         max-height: 50px;
         margin: 0 30px;
       }
@@ -210,10 +219,10 @@ header {
 }
 
 @keyframes slide {
-  from{
+  from {
     transform: translateX(0);
   }
-  to{
+  to {
     transform: translateX(-100%);
   }
 }
@@ -224,20 +233,20 @@ header {
   padding: var(--main-sections-padding);
   display: flex;
   justify-content: space-between;
-  .left{
+  .left {
     width: 37.5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    h1{
+    h1 {
       font-weight: 600;
       font-size: 60px;
       line-height: 60px;
-      span{
+      span {
         color: var(--pink-color);
       }
     }
-    p{
+    p {
       margin-top: 20px;
       font-weight: 300;
       font-size: 20px;
@@ -245,8 +254,8 @@ header {
     }
   }
 
-  .right{
-    width:57.5%;
+  .right {
+    width: 57.5%;
   }
   // .top {
   //   display: flex;
@@ -308,58 +317,176 @@ header {
   margin-top: 150px;
 
   .top {
-    h1 {
-      font-weight: 600;
-      font-size: 60px;
-      line-height: 60px;
+    p{
+      font-weight: 300;
+      font-size: 25px;
+      line-height: 27.5px;
+      text-align: center;
     }
   }
 
-  .bottom {
-    margin-top: 50px;
+  .bottom{
     display: flex;
-    .left {
-      .card {
-        padding: 20px 30px 20px 30px;
-        border-radius: 30px;
-        background: var(--service-cards-gradient);
+    gap: 40px;
+    margin-top: 40px;
+    .left, .right{
+      width: 50%;
+    }
+
+    .left{
+      .container{
+        padding: 30px;
+        border-radius: 20px;
+        height: 550px;
+        background-image: url(imgs/voiceclone.jpg);
+        background-color: black;
+        background-size: cover;
+        background-position: center;
         color: var(--white);
-        margin-top: 15px;
-
-        &:first-child {
-          max-width: 904px;
+        position: relative;
+        overflow: hidden;
+        transition: 0.5s;
+          
+        &:hover{
+          .text{
+            bottom: 20px;
+          }
         }
-
-        &:nth-child(2) {
-          max-width: 1008px;
-        }
-
-        &:nth-child(3) {
-          max-width: 951px;
-        }
-        &:nth-child(4) {
-          max-width: 882px;
-        }
-
-        h1 {
-          font-weight: 600;
-          font-size: 50px;
-          line-height: 50px;
-        }
-        p {
-          font-weight: 400;
-          font-size: 25px;
-          line-height: 25px;
-          margin-top: 10px;
+        
+        .text{
+          transition: 0.5s;
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          bottom: -10%;  
         }
       }
     }
-    .right {
-      z-index: 100;
-      position: absolute;
-      right: 100px;
+
+    .right{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .speech-to-text{
+        height: 50%;
+        padding: 30px;
+        border-radius: 20px;
+        color: var(--white);
+        background-image: url(imgs/speechtotext.jpg);
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+
+        &:hover{
+          .text{
+            bottom: 20px;
+          }
+        } 
+
+        .text{
+          transition: 0.5s;
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          bottom: -30%;  
+        }
+      }
+      .otherservices{
+        height: 50%;
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+
+        .text-to-speech, .others{
+          width: 50%;
+          border-radius: 20px;
+          background-size: cover;
+          background-position:  center;
+          padding: 20px;
+          color: var(--white);
+        }
+
+        .text-to-speech{
+          background-image: url(imgs/about-page-img.png);
+          position: relative;
+          overflow: hidden;
+
+          &:hover{
+             .text{
+              bottom: 20px;
+             }
+          }
+
+          .text{
+            transition: 0.5s;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            bottom: -30%;  
+          }
+        }
+
+        .others{
+          background-color: #ffcc00;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: 0.5s;
+          cursor: pointer;
+
+          &:hover{
+            transform: scale(1.05);
+          }
+        }
+      }
     }
   }
+
+  //   .left {
+  //     .card {
+  //       padding: 20px 30px 20px 30px;
+  //       border-radius: 30px;
+  //       background: var(--service-cards-gradient);
+  //       color: var(--white);
+  //       margin-top: 15px;
+
+  //       &:first-child {
+  //         max-width: 904px;
+  //       }
+
+  //       &:nth-child(2) {
+  //         max-width: 1008px;
+  //       }
+
+  //       &:nth-child(3) {
+  //         max-width: 951px;
+  //       }
+  //       &:nth-child(4) {
+  //         max-width: 882px;
+  //       }
+
+  //       h1 {
+  //         font-weight: 600;
+  //         font-size: 50px;
+  //         line-height: 50px;
+  //       }
+  //       p {
+  //         font-weight: 400;
+  //         font-size: 25px;
+  //         line-height: 25px;
+  //         margin-top: 10px;
+  //       }
+  //     }
+  //   }
+  //   .right {
+  //     z-index: 100;
+  //     position: absolute;
+  //     right: 100px;
+  //   }
+  // }
 }
 
 // Guide Styles

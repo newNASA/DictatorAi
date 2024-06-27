@@ -222,49 +222,110 @@ header .head .right-head .spinner1 {
   padding: var(--main-sections-padding);
   margin-top: 150px;
 }
-.services .top h1 {
-  font-weight: 600;
-  font-size: 60px;
-  line-height: 60px;
+.services .top p {
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 27.5px;
+  text-align: center;
 }
 .services .bottom {
-  margin-top: 50px;
   display: flex;
+  gap: 40px;
+  margin-top: 40px;
 }
-.services .bottom .left .card {
-  padding: 20px 30px 20px 30px;
-  border-radius: 30px;
-  background: var(--service-cards-gradient);
+.services .bottom .left, .services .bottom .right {
+  width: 50%;
+}
+.services .bottom .left .container {
+  padding: 30px;
+  border-radius: 20px;
+  height: 550px;
+  background-image: url(imgs/voiceclone.jpg);
+  background-color: black;
+  background-size: cover;
+  background-position: center;
   color: var(--white);
-  margin-top: 15px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
 }
-.services .bottom .left .card:first-child {
-  max-width: 904px;
+.services .bottom .left .container:hover .text {
+  bottom: 20px;
 }
-.services .bottom .left .card:nth-child(2) {
-  max-width: 1008px;
-}
-.services .bottom .left .card:nth-child(3) {
-  max-width: 951px;
-}
-.services .bottom .left .card:nth-child(4) {
-  max-width: 882px;
-}
-.services .bottom .left .card h1 {
-  font-weight: 600;
-  font-size: 50px;
-  line-height: 50px;
-}
-.services .bottom .left .card p {
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 25px;
-  margin-top: 10px;
+.services .bottom .left .container .text {
+  transition: 0.5s;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  bottom: -10%;
 }
 .services .bottom .right {
-  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.services .bottom .right .speech-to-text {
+  height: 50%;
+  padding: 30px;
+  border-radius: 20px;
+  color: var(--white);
+  background-image: url(imgs/speechtotext.jpg);
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.services .bottom .right .speech-to-text:hover .text {
+  bottom: 20px;
+}
+.services .bottom .right .speech-to-text .text {
+  transition: 0.5s;
   position: absolute;
-  right: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  bottom: -30%;
+}
+.services .bottom .right .otherservices {
+  height: 50%;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+.services .bottom .right .otherservices .text-to-speech, .services .bottom .right .otherservices .others {
+  width: 50%;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  color: var(--white);
+}
+.services .bottom .right .otherservices .text-to-speech {
+  background-image: url(imgs/about-page-img.png);
+  position: relative;
+  overflow: hidden;
+}
+.services .bottom .right .otherservices .text-to-speech:hover .text {
+  bottom: 20px;
+}
+.services .bottom .right .otherservices .text-to-speech .text {
+  transition: 0.5s;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  bottom: -30%;
+}
+.services .bottom .right .otherservices .others {
+  background-color: #ffcc00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.services .bottom .right .otherservices .others:hover {
+  transform: scale(1.05);
 }
 
 .guide {
