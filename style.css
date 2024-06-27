@@ -9,12 +9,20 @@
   --white: white;
   --text-color: rgba(34, 34, 34, 1);
   --pink-color: rgba(255, 43, 158, 1);
-  --header-gradient-h1:linear-gradient(106.7deg, #222222 12.31%, #5B5B5B 87.69%);
-  --blue-btn-gradient:linear-gradient(92.71deg, #5A56FF 11.79%, #8A88FF 88.21%);
-  --pink-gradient: linear-gradient(87.99deg, #FF5CB5 24.48%, #FF8BCA 75.52%);
-  --service-cards-gradient: linear-gradient(90deg, #5A56FF 0%, #8A88FF 100%);
+  --header-gradient-h1: linear-gradient(
+    106.7deg,
+    #222222 12.31%,
+    #5b5b5b 87.69%
+  );
+  --blue-btn-gradient: linear-gradient(
+    92.71deg,
+    #5a56ff 11.79%,
+    #8a88ff 88.21%
+  );
+  --pink-gradient: linear-gradient(87.99deg, #ff5cb5 24.48%, #ff8bca 75.52%);
+  --service-cards-gradient: linear-gradient(90deg, #5a56ff 0%, #8a88ff 100%);
   --p-size: 20px;
-  --main-sections-padding:25px 100px;
+  --main-sections-padding: 25px 100px;
 }
 
 li {
@@ -88,7 +96,8 @@ header .head {
   height: 85%;
   padding: 50px 100px;
 }
-header .head .left-head, header .head .right-head {
+header .head .left-head,
+header .head .right-head {
   width: 50%;
 }
 header .head .left-head {
@@ -130,6 +139,56 @@ header .head .right-head .spinner1 {
   }
 }
 
+.componies {
+  width: 100%;
+  padding: 50px 0;
+}
+.componies .top p {
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 27.5px;
+  text-align: center;
+}
+.componies .logos {
+  overflow: hidden;
+  padding: 40px 0;
+  white-space: nowrap;
+  position: relative;
+}
+.componies .logos::before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--white)) !important;
+}
+.componies .logos::before, .componies .logos::after {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--white));
+}
+.componies .logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+.componies .logos .logos-slide {
+  animation: 20s slide infinite linear;
+  display: inline-block;
+}
+.componies .logos .logos-slide img {
+  max-height: 50px;
+  margin: 0 30px;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 .about {
   padding: var(--main-sections-padding);
 }

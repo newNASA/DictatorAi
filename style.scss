@@ -9,13 +9,21 @@
   --white: white;
   --text-color: rgba(34, 34, 34, 1);
   --pink-color: rgba(255, 43, 158, 1);
-  --header-gradient-h1:linear-gradient(106.7deg, #222222 12.31%, #5B5B5B 87.69%);
-  --blue-btn-gradient:linear-gradient(92.71deg, #5A56FF 11.79%, #8A88FF 88.21%);
-  --pink-gradient: linear-gradient(87.99deg, #FF5CB5 24.48%, #FF8BCA 75.52%);
-  --service-cards-gradient: linear-gradient(90deg, #5A56FF 0%, #8A88FF 100%);
+  --header-gradient-h1: linear-gradient(
+    106.7deg,
+    #222222 12.31%,
+    #5b5b5b 87.69%
+  );
+  --blue-btn-gradient: linear-gradient(
+    92.71deg,
+    #5a56ff 11.79%,
+    #8a88ff 88.21%
+  );
+  --pink-gradient: linear-gradient(87.99deg, #ff5cb5 24.48%, #ff8bca 75.52%);
+  --service-cards-gradient: linear-gradient(90deg, #5a56ff 0%, #8a88ff 100%);
 
   --p-size: 20px;
-  --main-sections-padding:25px 100px;
+  --main-sections-padding: 25px 100px;
 }
 
 li {
@@ -94,18 +102,19 @@ header {
 
   // Head Styles
 
-  .head{
+  .head {
     display: flex;
     height: 85%;
     padding: 50px 100px;
 
-    .left-head, .right-head{
+    .left-head,
+    .right-head {
       width: 50%;
     }
 
-    .left-head{
+    .left-head {
       display: flex;
-      h1{
+      h1 {
         font-weight: 600;
         font-size: 100px;
         line-height: 120px;
@@ -114,22 +123,26 @@ header {
         -webkit-text-fill-color: transparent;
       }
     }
-    
-    .right-head{
+
+    .right-head {
       display: flex;
       align-items: center;
       justify-content: center;
       .spinner {
-        background-image: linear-gradient(rgb(186, 66, 255) 35%,rgb(0, 225, 255));
+        background-image: linear-gradient(
+          rgb(186, 66, 255) 35%,
+          rgb(0, 225, 255)
+        );
         width: 400px;
         height: 400px;
         animation: spinning82341 5s linear infinite;
         text-align: center;
         border-radius: 50%;
         filter: blur(1px);
-        box-shadow: 0px -5px 20px 0px rgb(186, 66, 255), 0px 5px 20px 0px rgb(0, 225, 255);
+        box-shadow: 0px -5px 20px 0px rgb(186, 66, 255),
+          0px 5px 20px 0px rgb(0, 225, 255);
       }
-      
+
       .spinner1 {
         background-color: var(--white);
         width: 400px;
@@ -137,7 +150,7 @@ header {
         border-radius: 50%;
         filter: blur(40px);
       }
-      
+
       @keyframes spinning82341 {
         to {
           transform: rotate(360deg);
@@ -147,33 +160,91 @@ header {
   }
 }
 
+// Componies styles
+
+.componies {
+  width: 100%;
+  padding: 50px 0;
+  .top {
+    p {
+      font-weight: 300;
+      font-size: 25px;
+      line-height: 27.5px;
+      text-align: center;
+    }
+  }
+  .logos{
+    overflow: hidden;
+    padding: 40px 0;
+    white-space: nowrap;
+    position: relative;
+    
+    &::before{
+      left: 0;
+      background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--white)) !important;
+    }
+    
+    &::before,&::after{
+      position: absolute;
+      top: 0;
+      width: 200px;
+      height: 100%;
+      content: "";
+      z-index: 2;
+      right: 0;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--white));
+    }
+    &:hover .logos-slide{
+      animation-play-state: paused;
+    }
+
+    .logos-slide{
+      animation: 20s slide infinite linear;
+      display: inline-block;
+      img{
+        max-height: 50px;
+        margin: 0 30px;
+      }
+    }
+  }
+}
+
+@keyframes slide {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
+
 // About Styles
 
-.about{
+.about {
   padding: var(--main-sections-padding);
-  .top{
+  .top {
     display: flex;
     gap: 20px;
-    .left{
+    .left {
       width: 40%;
     }
-    .left{
-      h1{
-        span{
+    .left {
+      h1 {
+        span {
           color: var(--pink-color);
         }
         font-weight: 700;
-        font-size: 75px ;
+        font-size: 75px;
         line-height: 75px;
         color: var(--text-color);
       }
     }
-    .right{
+    .right {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       width: 60%;
-      h2{
+      h2 {
         padding: 15px 25px;
         display: flex;
         align-items: center;
@@ -188,13 +259,13 @@ header {
     }
   }
 
-  .bottom{
+  .bottom {
     margin-top: 25px;
-    .card{
+    .card {
       padding: 40px 30px 40px 30px;
       border-radius: 20px;
       background: var(--pink-gradient);
-      p{
+      p {
         font-weight: 400;
         font-size: 33px;
         line-height: 33px;
@@ -206,50 +277,50 @@ header {
 
 // Services Styles
 
-.services{
-  padding:var(--main-sections-padding) ;
+.services {
+  padding: var(--main-sections-padding);
   margin-top: 150px;
 
-  .top{
-    h1{
+  .top {
+    h1 {
       font-weight: 600;
       font-size: 60px;
       line-height: 60px;
     }
   }
 
-  .bottom{
+  .bottom {
     margin-top: 50px;
     display: flex;
-    .left{
-      .card{
+    .left {
+      .card {
         padding: 20px 30px 20px 30px;
         border-radius: 30px;
         background: var(--service-cards-gradient);
         color: var(--white);
         margin-top: 15px;
-  
-        &:first-child{
+
+        &:first-child {
           max-width: 904px;
         }
-  
-        &:nth-child(2){
+
+        &:nth-child(2) {
           max-width: 1008px;
         }
-  
-        &:nth-child(3){
+
+        &:nth-child(3) {
           max-width: 951px;
         }
-        &:nth-child(4){
+        &:nth-child(4) {
           max-width: 882px;
         }
-  
-        h1{
+
+        h1 {
           font-weight: 600;
           font-size: 50px;
           line-height: 50px;
         }
-        p{
+        p {
           font-weight: 400;
           font-size: 25px;
           line-height: 25px;
@@ -257,40 +328,40 @@ header {
         }
       }
     }
-    .right{
+    .right {
       z-index: 100;
       position: absolute;
-      right:100px;
+      right: 100px;
     }
   }
 }
 
 // Guide Styles
 
-.guide{
+.guide {
   display: flex;
   justify-content: space-between;
   padding: var(--main-sections-padding);
   margin-top: 150px;
 
-  .left{
+  .left {
     width: 37.5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    h1{
+    h1 {
       font-weight: 600;
       font-size: 80px;
       line-height: 80px;
     }
-    p{
+    p {
       font-weight: 400;
       font-size: 30px;
       line-height: 30px;
     }
   }
-  .right{
+  .right {
     width: 57.5%;
     border: 1px solid red;
   }
