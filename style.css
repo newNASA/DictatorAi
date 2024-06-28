@@ -8,6 +8,7 @@
 :root {
   --white: white;
   --text-color: rgba(34, 34, 34, 1);
+  --section-top-p:rgba(109, 109, 109, 1);
   --pink-color: rgba(255, 43, 158, 1);
   --header-gradient-h1: linear-gradient(
     106.7deg,
@@ -148,6 +149,7 @@ header .head .right-head .spinner1 {
   font-size: 25px;
   line-height: 27.5px;
   text-align: center;
+  color: var(--section-top-p);
 }
 .componies .logos {
   overflow: hidden;
@@ -213,6 +215,7 @@ header .head .right-head .spinner1 {
   font-weight: 300;
   font-size: 20px;
   line-height: 27.5px;
+  color: var(--section-top-p);
 }
 .about .right {
   width: 57.5%;
@@ -227,6 +230,7 @@ header .head .right-head .spinner1 {
   font-size: 25px;
   line-height: 27.5px;
   text-align: center;
+  color: var(--section-top-p);
 }
 .services .bottom {
   display: flex;
@@ -328,6 +332,68 @@ header .head .right-head .spinner1 {
   transform: scale(1.05);
 }
 
+.advantages {
+  padding: var(--main-sections-padding);
+  margin-top: 100px;
+}
+.advantages .top p {
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 27.5px;
+  text-align: center;
+  color: var(--section-top-p);
+}
+.advantages .bottom {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.advantages .bottom .card {
+  display: flex;
+  border-radius: 40px;
+  overflow: hidden;
+  justify-content: space-between;
+  height: 350px;
+}
+.advantages .bottom .card .left {
+  width: 65%;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+}
+.advantages .bottom .card .left h1 {
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 60px;
+}
+.advantages .bottom .card .left p {
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 25px;
+}
+.advantages .bottom .card .right {
+  width: 35%;
+  position: relative;
+}
+.advantages .bottom .card .right img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.advantages .bottom .card:first-child {
+  color: var(--white);
+  background: linear-gradient(78.1deg, #649FFF 6.47%, #BFD7FF 93.53%);
+}
+.advantages .bottom .card:nth-child(2) {
+  background: linear-gradient(96.28deg, #FEDFFF 1.89%, #FD8AFF 98.11%);
+}
+.advantages .bottom .card:last-child {
+  background: linear-gradient(78.1deg, #A4A4A4 6.47%, #FFFFFF 93.53%);
+}
+
 .guide {
   display: flex;
   justify-content: space-between;
@@ -348,10 +414,13 @@ header .head .right-head .spinner1 {
 }
 .guide .left p {
   font-weight: 400;
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 27.5px;
+  color: var(--section-top-p);
 }
 .guide .right {
   width: 57.5%;
-  border: 1px solid red;
+}
+.guide .right iframe {
+  border-radius: 30px;
 }/*# sourceMappingURL=style.css.map */
