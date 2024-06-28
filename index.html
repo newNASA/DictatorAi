@@ -13,6 +13,7 @@
 
     <!-- Style links -->
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -206,8 +207,8 @@
             </div>
             <div class="card">
                 <div class="left">
-                    <h1>Google</h1>
-                    <p>Loyiha Google’ning ilg‘or sun’iy intellektini bir necha usulda qo‘llaydi.Chatbotlar yoki ovozli yordamchilar orqali boʻladimi, Google sunʼiy intellektlari foydalanuvchilar va loyiha oʻrtasida tabiiy va foydali oʻzaro aloqalarni yaratadi.</p>
+                    <h1>Microsoft</h1>
+                    <p>Vazifalarni soddalashtirish va samaradorlikni oshirish uchun Microsoft-ning ilg'or texnologiyasidan foydalanadigan. Ushbu loyiha bir qator sun'iy intellekt vositalarini taklif qiluvchi bulut platformasi Microsoft Azure kuchidan foydalanadi. Azure’ning OpenAI tizimi asosida qurilgan ushbu AI yordamchisi tabiiy til ko‘rsatmalarini tushuna oladi.</p>
                 </div>
                 <div class="right">
                     <img src="imgs/microsoft.png" alt="">
@@ -215,8 +216,8 @@
             </div>
             <div class="card">
                 <div class="left">
-                    <h1>Google</h1>
-                    <p>Loyiha Google’ning ilg‘or sun’iy intellektini bir necha usulda qo‘llaydi.Chatbotlar yoki ovozli yordamchilar orqali boʻladimi, Google sunʼiy intellektlari foydalanuvchilar va loyiha oʻrtasida tabiiy va foydali oʻzaro aloqalarni yaratadi.</p>
+                    <h1>Ovozli sun’iy intelekt</h1>
+                    <p>Bu loyiha nafaqat real nutqni yaratadi. Ushbu loyihaning boshida kuchli ovozli sun'iy intellekt yotadi, u nafaqat inson nutqini taqlid qilishga, balki murakkab so'rovlarni tushunish va ularga noziklik va ravonlik bilan javob berishga qodir.</p>
                 </div>
                 <div class="right">
                     <img src="imgs/soundwave.png" alt="">
@@ -241,7 +242,53 @@
 
     <!-- Guide Codes End -->
 
+    <!-- Footer Codes -->
+
+    <footer>
+        <div class="top">
+            <div class="left">
+                <a href="/">
+                    <img src="imgs/logo.png" alt="Logo img">
+                </a>
+            </div>
+            <div class="center">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Pricing</a></li>
+                    <li><a href="">Privacy&Policy</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href=""><img src="imgs/Whatsapp.png" alt=""></a></li>
+                    <li><a href=""><img src="imgs/Telegram.png" alt=""></a></li>
+                    <li><a href=""><img src="imgs/Instagram.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="left">
+                 <p>2024 <span>©</span> Dictator.  Barcha huquqlar himoyalangan</p>
+            </div>
+            <div class="right">
+                <a href="">dictator@mail.ru</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer Codes End -->
+
+    <!-- Javascript Links -->
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Javascript Links End-->
+
+
     <script>
         var typed = new Typed(".auto-type-header", {
             strings: ['matnni ovozga o\'zgartiring', "ovozni matnga o'zgartiring", "ovozingizni klon qiling", "ovozingizni boshqa tilga o'zgaritiring"],
@@ -252,8 +299,9 @@
 
         var copy = document.querySelector(".logos-slide").cloneNode(true);
         document.querySelector(".logos").appendChild(copy);
+
+        AOS.init();
     </script>
-    <script src="script.js"></script>
 </body>
 
 </html>

@@ -423,4 +423,49 @@ header .head .right-head .spinner1 {
 }
 .guide .right iframe {
   border-radius: 30px;
+}
+
+footer {
+  background-color: var(--text-color);
+  padding: var(--main-sections-padding);
+  margin-top: 100px;
+}
+footer .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .top .center ul {
+  display: flex;
+  gap: 20px;
+}
+footer .top .center ul a {
+  color: var(--white);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+}
+footer .top .right ul {
+  display: flex;
+  gap: 10px;
+}
+footer .bottom {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+footer .bottom .left p {
+  font-weight: 250;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--section-top-p);
+}
+footer .bottom .left p span {
+  color: var(--white);
+}
+footer .bottom .right a {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--white);
 }/*# sourceMappingURL=style.css.map */
